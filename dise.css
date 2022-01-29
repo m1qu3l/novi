@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: rgba(170, 255, 170,0.3);
+    text-align: center;
+}
+.logo{
+    position: absolute;
+    z-index: 10000000;
+    bottom: 3%;
+    left: 2%;
+    font-size: .7em;
+    text-shadow: 2px 2px 2px #aaa;
+}
+
+.all{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.pre_all, .for_all{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.for_all div, .pre_all .pre{
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow: -15px -15px 15px 1px rgba(255, 255, 255, .2),
+    15px 15px 15px 1px rgba(0, 0, 0, .1),
+    inset -5px -5px 5px 1px rgba(255, 255, 255, .2),
+    inset 5px 5px 5px 1px rgba(0, 0, 0, .1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(180, 255, 180,.2);
+}
+.in , .for_all div button{
+    border: none;
+    box-shadow: 0px 0px 10px 0px #777;
+    padding: .5em .6em;
+    border-radius: 5px;
+    background: rgba(255, 170, 255, .7);
+    margin: 0 .2em;
+}
+.in:hover, .for_all div button:hover{
+    transition: .3s ease-in;
+    transform: scale(1.2);
+}
+.for_all div h2{
+    margin-bottom: 1.5em;
+    padding-bottom: .5em;
+    width: 80%;
+    border-bottom: 2px solid rgb(255, 170, 255);
+}
+.for_all div b{
+    margin: .2em .5em;
+
+}
+
+.for_all, .pre_all, .say_yes {
+    position: absolute;
+    transform: scale(0);
+    transition: .3s ease-in;
+}
+.otro_ac{
+    transition: .3s ease-in;
+    position: absolute;
+    transform: scale(1);
+}
+
+.activo{
+    transition: .3s ease-in;
+    position: relative;
+    transform: scale(1);
+}
+
+.pre_all .pre h2{
+    position: absolute;
+    top: 15%;
+}
+
+.pre_all .pre h3{
+    font-size: 1.4em;
+    margin-bottom: 1.5em;
+    padding-bottom: .5em;
+    width: 80%;
+    border-bottom: 2px solid rgb(255, 170, 255);
+}
+.pre button{
+    font-size: 1.2em;
+    border: none;
+    box-shadow: 0px 0px 10px 0px #777;
+    padding: .5em .6em;
+    border-radius: 5px;
+    background: rgba(255, 170, 255, .7);
+    margin: 0 .2em;
+}
+#si{
+    position: absolute;
+    right: 30%;
+    bottom: 37%;
+    padding: .4em .5em;
+    width: 60px;
+    height: 40px;
+}
+#no{
+    position: absolute;
+    left: 30%;
+    bottom: 37%;
+    width: 60px;
+    height: 40px;
+}
+
+.say_yes{
+    max-width: 400px;
+    max-height: 300px;
+    height: 100%;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: -15px -15px 15px 1px rgba(255, 255, 255, .2),
+    15px 15px 15px 1px rgba(0, 0, 0, .1),
+    inset -5px -5px 5px 1px rgba(255, 255, 255, .2),
+    inset 5px 5px 5px 1px rgba(0, 0, 0, .1);
+    background: rgba(220, 255, 220,1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(0);
+}
+.cerrar{
+    font-size: 1.5em;
+    position: absolute;
+    right: 10%;
+    top: 10%;
+}
+@media screen and (max-width:500px){
+    .for_all form, .pre_all pre{
+        width: 95%;
+        padding: .2em .5em;
+    }
+    .logo{
+        font-size: .6em;
+        
+    }
+}
+@media screen and (max-width:500px){
+    #si{
+        position: absolute;
+        right: 25%;
+    }
+    #no{
+        position: absolute;
+        left: 25%;
+    }
+}
+
